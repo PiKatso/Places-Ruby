@@ -3,15 +3,15 @@ require "./app"
 
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
+  before() do
+    Places.clear_all()
+  end
 
-# example integration test
-
-# describe("the phrase parser path", {:type => :feature}) do
-#   it("processes the user input and returns correct message if its a palindrome") do
-#     visit("/")
-#     fill_in("phrase1", :with => "madam")
-#     fill_in("phrase2", :with => "anagram")
-#     click_button("what am i?")
-#     expect(page).to have_content("'madam' is a palindrome")
-#   end
-# end
+describe("the page displays list", {:type => :feature}) do
+  it("processes the user input and returns correct message for successfully adding place") do
+    visit("/")
+    fill_in("destination", :with => "Aruba")
+    click_button("Add me")
+    expect(page).to have_content("Places you've been Congrats!! Your place has been added succesfully!! back")
+  end
+end

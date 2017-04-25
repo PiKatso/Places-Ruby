@@ -3,6 +3,9 @@ require "rspec"
 require "pry"
 
 describe 'Places#destination' do
+  before() do
+    Places.clear_all()
+  end
 
   it ("takes input and adds place to list") do
     my_places = Places.new("Mexico")
