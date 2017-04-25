@@ -29,9 +29,3 @@ describe 'Places#destination' do
     end
   end
 end
-
-#   it "returns false if the word does not have a vowel" do
-#     expect(word.is_word?("wrd")).to eq false
-#   end
-
-# end
