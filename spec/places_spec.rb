@@ -14,6 +14,14 @@ describe 'Places#destination' do
       expect(Places.places_list()).to(eq([]))
     end
   end
+
+  describe(".places_save") do
+    it("is adding place to the array of saved places") do
+      my_places = Places.new("Mexico")
+      my_places.places_save()
+      expect(Places.places_list()).to(eq(["Mexico"]))
+    end
+  end
 end
 
 #   it "returns false if the word does not have a vowel" do

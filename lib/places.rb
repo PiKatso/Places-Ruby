@@ -13,6 +13,6 @@ class Places
   end
 
   define_method(:places_save) do
-    @@places.push(self)
+    @@places.push(@destination)
   end
 end
