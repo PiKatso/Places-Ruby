@@ -22,6 +22,12 @@ describe 'Places#destination' do
       expect(Places.places_list()).to(eq(["Mexico"]))
     end
   end
+
+  describe(".clear_all") do
+    it("empties array when called") do
+      expect(Places.clear_all()).to(eq([]))
+    end
+  end
 end
 
 #   it "returns false if the word does not have a vowel" do

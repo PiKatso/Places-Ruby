@@ -15,4 +15,8 @@ class Places
   define_method(:places_save) do
     @@places.push(@destination)
   end
+
+  define_singleton_method(:clear_all) do
+    @@places = []
+  end
 end
